@@ -1,0 +1,17 @@
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 60px;
+  color: #000;
+  &_xs {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &_s {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &_xxl {
+    font-size: 48px;
+  }
+}
