@@ -45,10 +45,50 @@
         content: '';
         position: absolute;
         width: 1px;
-        height: 100%;
+        height: calc(100% + 16px);
         top: -16px;
         left: 0;
         background: #000;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 69px;
+      height: 1px;
+      width: 45px;
+      background: #000;
+    }
+    &-header {
+      position: relative;
+      padding: 45px 0 0 100px;
+
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+    &-body {
+      margin-top: 12px;
+      padding-left: 43px;
+      font-size: 12px;
+    }
+    &-descr {
+      margin-top: 2px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &-icon {
+      @include before_circle;
+      position: absolute;
+      top: 50px;
+      left: 45px;
+      img {
+        position: absolute;
+        top: 14px;
+        left: 14px;
       }
     }
   }
