@@ -9,11 +9,13 @@
     position: relative;
     padding-left: 10px;
     z-index: 10;
+    color: #000000;
   }
 
   &__title {
     margin-top: 10px;
     width: 535px;
+    color: #000000;
   }
 
   &__btns {
@@ -23,13 +25,14 @@
     font-weight: bold;
   }
   &__link {
-    color: #000;
+    color: #000000;
     cursor: pointer;
+    transition: all 0.5s ease;
     &_transparent {
       background-color: transparent;
     }
     &:hover {
-      color: #000;
+      color: #ffffff;
       text-decoration: none;
     }
   }

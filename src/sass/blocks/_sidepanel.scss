@@ -8,30 +8,58 @@
   align-items: center;
   justify-content: space-between;
   z-index: 100;
-  color: #000;
+  transition: all 0.5s ease, color 0.3s ease;
 
   &__link {
     svg path {
       transition: all 0.5s ease;
-    }
-    &:hover {
-      svg path {
-        fill: $main-color;
-      }
+      fill: currentColor;
     }
   }
+
   &__divider {
     width: 2px;
     height: 70px;
-    background-color: #000;
+    background-color: currentColor;
+    transition: all 0.5s ease;
   }
+
   &__text {
     height: 150px;
     width: 25px;
+
     span {
       display: block;
       transform: rotate(-90deg) translate(-30%, -260%);
       width: 150px;
+    }
+  }
+
+  &--white {
+    color: #fff;
+
+    .sidepanel {
+      &__divider {
+        color: #fff;
+      }
+
+      &__link svg path {
+        fill: #fff;
+      }
+    }
+  }
+
+  &--black {
+    color: rgb(0, 0, 0);
+
+    .sidepanel {
+      &__divider {
+        background-color: rgb(0, 0, 0);
+      }
+
+      &__link svg path {
+        fill: rgb(0, 0, 0);
+      }
     }
   }
 }
