@@ -1,3 +1,4 @@
+// Burger menu
 const hamburgerMenu = document.querySelector('.hamburger');
 const closeMenu = document.querySelector('.menu__close');
 const menuBlock = document.querySelector('.menu');
@@ -10,6 +11,7 @@ closeMenu.addEventListener('click', () => {
   menuBlock.classList.remove('active');
 });
 
+// Sidepanel theme changer
 window.addEventListener('scroll', () => {
   const sidepanel = document.querySelector('.sidepanel');
   if (!sidepanel) return;
@@ -21,4 +23,12 @@ window.addEventListener('scroll', () => {
     sidepanel.classList.remove('sidepanel--black');
     sidepanel.classList.add('sidepanel--white');
   }
+});
+
+// Skills percent
+const percents = document.querySelectorAll('.skills__proc');
+const lines = document.querySelectorAll('.skills__stat-active');
+
+percents.forEach((item, i) => {
+  lines[i].style.width = item.innerHTML;
 });

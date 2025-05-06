@@ -1,18 +1,5 @@
 .skills {
   padding-top: 120px;
-  &__title {
-    @include before_circle;
-    position: relative;
-    text-align: center;
-    &::before {
-      top: -6px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  &__subtitle {
-    text-align: center;
-  }
   &__wrapper {
     margin-top: 60px;
     display: grid;
@@ -36,6 +23,42 @@
       color: black;
       font-size: 12px;
       font-weight: 500;
+    }
+  }
+  &__stats {
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  &__stat {
+    width: 350px;
+    &-top {
+      @include before_circle;
+      position: relative;
+      padding: 2px 0 0 10px;
+      color: black;
+      font-size: 14px;
+      font-weight: 700;
+      // &::before {
+      //   left: -10px;
+      // }
+      display: flex;
+      justify-content: space-between;
+    }
+    &-bottom {
+      margin-top: 27px;
+    }
+    :is(&-disable, &-active) {
+      width: 100%;
+      height: 14px;
+      border-radius: 5px;
+    }
+    &-disable {
+      background-color: #e8e4de;
+    }
+    &-active {
+      background-color: $main-color;
     }
   }
 }
