@@ -17,9 +17,15 @@
     }
   }
   &__item {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &__img {
     transition: all 0.2s ease;
+
     &:hover {
       filter: blur(5px) grayscale(1);
     }
