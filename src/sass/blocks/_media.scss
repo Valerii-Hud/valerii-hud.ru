@@ -2,6 +2,15 @@
   .sidepanel {
     display: none;
   }
+  .skills {
+    &__stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px;
+    }
+    &__stat {
+      width: 100%;
+    }
+  }
 }
 @media screen and (max-width: 1200px) {
   .container {
@@ -27,6 +36,11 @@
     &__wrapper {
       row-gap: 50px;
       grid-template-columns: 1fr;
+    }
+  }
+  .skills {
+    &__wrapper {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -92,6 +106,17 @@
       font-size: 17px;
     }
   }
+  .skills {
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+    }
+
+    &__stats {
+      padding-top: 60px;
+      gap: 30px 40px;
+    }
+  }
 }
 @media screen and (max-width: 576px) {
   .container {
@@ -124,6 +149,21 @@
     }
     &__skills {
       grid-template-columns: 1fr;
+    }
+  }
+  .skills {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+
+    &__stats {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
     }
   }
 }
