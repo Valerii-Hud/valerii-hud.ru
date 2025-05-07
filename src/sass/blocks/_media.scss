@@ -23,6 +23,12 @@
       column-gap: 20px;
     }
   }
+  .resume {
+    &__wrapper {
+      row-gap: 50px;
+      grid-template-columns: 1fr;
+    }
+  }
 }
 @media screen and (max-width: 992px) {
   .container {
@@ -76,6 +82,14 @@
     }
     &__skill {
       grid-template-columns: 40px 200px;
+    }
+  }
+  .resume {
+    &__wrapper {
+      padding: 50px 0 0 0;
+    }
+    &__column-title {
+      font-size: 17px;
     }
   }
 }
