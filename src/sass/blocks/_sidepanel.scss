@@ -9,8 +9,9 @@
   justify-content: space-between;
   z-index: 100;
   transition: all 0.5s ease, color 0.3s ease;
-
+  text-align: center;
   &__link {
+    transform: rotate(-90deg);
     svg path {
       transition: all 0.5s ease;
       fill: currentColor;
