@@ -16,6 +16,11 @@
       gap: 15px 200px;
     }
   }
+  .contacts {
+    &__wrapper {
+      justify-content: space-around;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -61,6 +66,15 @@
         grid-row: unset;
         grid-column: unset;
       }
+    }
+  }
+  .contacts {
+    &__wrapper {
+      padding: 0;
+      grid-template-columns: 400px 520px;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 250px);
     }
   }
 }
@@ -111,6 +125,18 @@
       border: none;
     }
   }
+  .contacts {
+    &__wrapper {
+      grid-template-columns: 300px 400px;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 195px);
+    }
+    &__btn {
+      padding: 8px 25px;
+      line-height: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -145,6 +171,8 @@
     }
   }
   .resume {
+    padding-top: 40px;
+
     &__wrapper {
       padding: 50px 0 0 0;
     }
@@ -153,6 +181,8 @@
     }
   }
   .skills {
+    padding-top: 40px;
+
     &__wrapper {
       grid-template-columns: repeat(2, 1fr);
       row-gap: 20px;
@@ -173,11 +203,26 @@
     }
   }
   .price {
+    padding-top: 40px;
+
     &__wrapper {
       margin-top: 20px;
       grid-template: repeat(3, 1fr) / repeat(1, 1fr);
       justify-content: center;
       row-gap: 20px;
+    }
+  }
+
+  .contacts {
+    padding-top: 40px;
+    &__photo {
+      display: none;
+    }
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 250px);
     }
   }
 }
@@ -240,6 +285,32 @@
   .price {
     &__wrapper {
       grid-template: repeat(3, 1fr) / repeat(1, 300px);
+    }
+  }
+  .contacts {
+    padding-bottom: 50px;
+    &__form {
+      grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+    }
+    &__textarea {
+      grid-column: unset;
+      width: 100%;
+    }
+    &__triggers {
+      grid-column: unset;
+      grid-template-columns: 1fr;
+      column-gap: unset;
+      row-gap: 20px;
+    }
+    &__btn {
+      order: 2;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+    &__policy {
+      width: 180px;
+      margin: 0 auto;
+      line-height: 18px;
     }
   }
 }
